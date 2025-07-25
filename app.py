@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 # Load the trained model (ensure model.pkl exists)
 model = joblib.load(open('linear_regression_model.pkl', 'rb'))
-
 @app.route('/')
 def home():
     return render_template('index.html')
